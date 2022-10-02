@@ -18,37 +18,36 @@ export function CovidApp() {
       <header>
         <div className="header">
           <div>
-            <h2>CovidApp</h2>
+            <h2>CoV19</h2>
           </div>
 
-          <div>
+          <div className="inp_btn_container">
             <input
               type="text"
+              id="input"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <button>Click</button>
+            <button id="click">Click</button>
+            <button id="theme_btn">
+              <i class="fa-solid fa-moon"></i>
+            </button>
           </div>
         </div>
       </header>
 
       <main>
         <div className="main_container">
-        {
-        details.map((item) => ( 
+          {details.map((item) => (
             <div className="container">
-                <h2>State : {item.state}</h2>
-                <h3>Date: {item.data[0].date}</h3>
-                <h3>Total Doses : {item.data[0].total_doses}</h3>
-                <h3>Total Vaccinated : {item.data[0].total_vaccinated}</h3>
-                
+              <h2>State : {item.state}</h2>
+              <h3>Date: {item.data[0].date}</h3>
+              <h3>Total Doses : {item.data[0].total_doses}</h3>
+              <h3>Total Vaccinated : {item.data[0].total_vaccinated}</h3>
             </div>
-            )
-        )
-      }
+          ))}
         </div>
       </main>
-    
     </>
   );
 }
