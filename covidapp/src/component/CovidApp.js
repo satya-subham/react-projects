@@ -3,6 +3,7 @@ import axios from "axios";
 
 export function CovidApp() {
   const [details, setDetails] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
   const [name, setName] = useState("");
 
   useEffect(() => {
@@ -10,9 +11,22 @@ export function CovidApp() {
       .get(`https://india-covid19vaccine.github.io/api/state_timeline.json`)
       .then((response) => {
         setDetails([...response.data]);
+        setFilteredData([...response.data])
       })
       .catch(() => {});
   }, []);
+
+  useEffect(() => {
+    const newData = details.filter((data) => {
+        if(data.state){
+            data.state.toLowerCase
+            ();
+            return data.state.includes(name);
+        }
+    });
+    setFilteredData(newData);
+  }, [name]);
+
   return (
     <>
       <header>
@@ -38,7 +52,7 @@ export function CovidApp() {
 
       <main>
         <div className="main_container">
-          {details.map((item) => (
+          {filteredData.map((item) => (
             <div className="container">
               <h2>State : {item.state}</h2>
               <h3>Date: {item.data[0].date}</h3>
