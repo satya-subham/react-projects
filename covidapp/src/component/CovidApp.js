@@ -27,6 +27,11 @@ export function CovidApp() {
     setFilteredData(newData);
   }, [name]);
 
+  function themeMode() {
+    const element = document.body;
+    element.classList.toggle("dark-mode");
+  }
+
   return (
     <>
       <header>
@@ -43,7 +48,7 @@ export function CovidApp() {
               onChange={(e) => setName(e.target.value)}
             />
             <button id="click">Click</button>
-            <button id="theme_btn">
+            <button id="theme_btn" onClick={themeMode}>
               <i class="fa-solid fa-moon"></i>
             </button>
           </div>
