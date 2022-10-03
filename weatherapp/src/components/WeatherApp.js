@@ -16,8 +16,7 @@ export function WeatherApp() {
         setPost(response.data);
       })
       .catch(() => {});
-    console.log(post);
-  }, [names]);
+  }, []);
 
   const addCity = () => {
     setNames(city);
