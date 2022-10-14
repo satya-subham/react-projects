@@ -1,0 +1,41 @@
+.nav_container{
+    width: 100%;
+    height: 70px;
+    color: white;
+    border-radius: 10px;
+    background-color: #877979;
+    box-shadow: -2px 3px 5px 0px rgba(114, 104, 104, 0.834);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav_heading h1{
+    color: white;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.search_input_btn input{
+    width: 300px;
+    height: 30px;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+}
+.search_input_btn button{
+    font-size: large;
+    height: 31px;
+    color: white;
+    background-color: burlywood;
+    margin-left: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.cart_signup_login_btns button{
+    height: 31px;
+    font-size: large;
+    color: white;
+    background-color: rgb(111, 171, 111);
+    margin-left: 5px;
+    border-radius: 10px;
+    border: none;
+}
