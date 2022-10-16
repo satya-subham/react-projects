@@ -1,0 +1,30 @@
+.products_heading_div{
+    margin-left: 45%;
+}
+.products_main_container{
+    width: 100%;
+    height: auto;
+}
+.product_container{
+    width: 350px;
+    height: 600px;
+    margin: 5px;
+    text-align: center;
+    overflow: auto;
+    border-radius: 10px;
+    background-color: rgb(129, 155, 156);
+    color: white;
+    display: inline-block;
+}
+.product_container img{
+    border-radius: 50%;
+}
+.product_container button{
+    width: auto;
+    height: 30px;
+    font-size: large;
+    background-color: rgb(159, 103, 159);
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
