@@ -7,6 +7,21 @@ export function SignUp() {
   const [signEmail, setSignEmail] = useState('');
   const [signPassword, setSignPassword] = useState("");
 
+  const handleSignup = (username, password) =>{
+    // let users = localStorage.getItem('users');
+    // if(users){
+    //   users = JSON.parse(users)
+    // }else{
+    //   users = []
+    // }
+
+    let users = []
+    users.push({
+      'signEmail': username,
+      'signPassword': password,
+    })
+    localStorage.setItem('users', users)
+  }
 
   return (
     <>
@@ -51,7 +66,7 @@ export function SignUp() {
           />
         </div>
         <div className="signup_button_div">
-          <button id="signup">Sign Up</button>
+          <button id="signup" onClick={handleSignup}>Sign Up</button>
         </div>
       </div>
     </>
